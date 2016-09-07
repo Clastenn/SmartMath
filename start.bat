@@ -1,1 +1,1 @@
-node run test
+npm test
