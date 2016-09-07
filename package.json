@@ -2,9 +2,9 @@
   "name": "smartmath",
   "version": "1.0.0",
   "description": "",
-  "main": "server/server.js",
+  "main": "server.js",
   "scripts": {
-    "test": "node server/server.js"
+    "test": "node server.js"
   },
   "repository": {
     "type": "git",
