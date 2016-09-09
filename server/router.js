@@ -1,14 +1,20 @@
-var express = require('express');
-var app = express();
+'use strict';
 
-module.exports = function(){
-	
-	app.use(express.static('public'));
+const express = require('express');
+const path = require('path');
+const SERVER_PORT = 8080;
 
-	app.get('/kartof', function (req, res) {
-	  res.send('Hello Kartof!');
-	});
-	app.listen(190, function () {
-	  console.log('Example app listening on port 190!');
-	});
-}
+module.exports = function (app) {
+
+    app.use(express.static('public'));
+
+    /* Put API routes here */
+
+    app.use(function (req, res) {
+        res.sendFile(path.join(__dirname, '../public/index.html'));
+    });
+
+    app.listen(SERVER_PORT, function () {
+        console.log('Example app listening on port ' + SERVER_PORT + '!');
+    });
+};

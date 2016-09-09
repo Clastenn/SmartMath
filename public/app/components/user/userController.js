@@ -1,10 +1,6 @@
-app.controller('userController', function ($scope, $http) {
+'use strict';
 
-    $scope.userdata = null;
-    $scope.error = null;
+angular.module('smartMath')
+    .controller('userController', function ($scope, $http) {
 
-    $http.get('userData.json')
-        .success(function (data) {
-            $scope.userdata = data;
-        });
-});
+    });

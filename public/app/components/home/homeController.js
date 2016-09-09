@@ -1,1 +1,6 @@
-app.controller('homeController', ['$scope', function($scope) {}]);
+'use strict';
+
+angular.module('smartMath')
+    .controller('homeController', function ($scope, $http) {
+
+    });
