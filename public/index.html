@@ -1,9 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="bg">
 <head>
-	<title>SmartMath</title>
+    <meta charset="UTF-8">
+    <title>SmartMath</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="assets/js/jquery-2.2.4.min.js"></script>
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-route.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Modify depending on the hosting -->
+    <base href="/"/>
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 </head>
-<body>
-Intex.html
+<body ng-app="smartMath">
+<header ng-include="'app/shared/header/header.html'"></header>
+<div class="container-fluid">
+    <div ng-view>
+
+    </div>
+</div>
+<footer ng-include="'app/shared/footer/footer.html'"></footer>
+
+<script src="app/app.module.js"></script>
+<script src="app/app.routes.js"></script>
+<script src="app/components/home/homeController.js"></script>
+<script src="app/components/user/userController.js"></script>
 </body>
 </html>
