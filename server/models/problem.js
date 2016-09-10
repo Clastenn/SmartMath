@@ -8,7 +8,6 @@ const problemSchema = mongoose.Schema({
         ref: 'Category',
         required: true
     },
-
     difficulty: {
         type: Number,
         min: 0,
