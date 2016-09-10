@@ -3,13 +3,11 @@
 const mongoose = require('mongoose');
 
 const problemSchema = mongoose.Schema({
-    categories: [
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Category',
-            required: true
-        }
-    ],
+    category: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Category',
+        required: true
+    },
 
     difficulty: {
         type: Number,
