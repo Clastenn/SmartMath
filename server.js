@@ -5,7 +5,6 @@ const app = express();
 const SERVER_PORT = 8080;
 
 require('./server/mongoose')();
-//require('./server/config.js')(app);
 require('./server/routes')(app);
 
 

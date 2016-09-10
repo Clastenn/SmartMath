@@ -12,6 +12,10 @@ angular.module('smartMath')
                 templateUrl: 'app/components/index/indexView.html',
                 controller: 'indexController'
             })
+            .when('/login', {
+                templateUrl: 'app/components/login/loginView.html',
+                controller: 'loginController'
+            })
             .when('/home', {
                 templateUrl: 'app/components/home/homeView.html',
                 controller: 'homeController'
@@ -20,7 +24,12 @@ angular.module('smartMath')
                 templateUrl: 'app/components/user/userView.html',
                 controller: 'userController'
             })
-            .otherwise({redirectTo: '/index'});
+            .when('/404', {
+                templateUrl: 'app/components/errors/404.html'
+            })
+            .otherwise({
+                redirectTo: '/404'
+            });
 
         $locationProvider.html5Mode(true);
     }]);

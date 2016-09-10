@@ -1,7 +1,12 @@
 'use strict';
 
+const express = require('express'),
+    router = express.Router();
+
 module.exports = function (app) {
-	//require("./session")(app);
     require('./api')(app);
     require('./partials')(app);
+
+    app.use('/api', router);
+
 };
