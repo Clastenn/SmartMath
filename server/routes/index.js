@@ -1,9 +1,7 @@
 'use strict';
 
-const express = require('express');
-const path = require('path');
-
 module.exports = function (app) {
+	require("./session")(app);
     require('./api')(app);
     require('./partials')(app);
 };
