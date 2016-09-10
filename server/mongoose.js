@@ -2,9 +2,9 @@
 
 const mongoose = require('mongoose');
 
-//const MONGO_DB_URI =  'mongodb://account:kartof98@ds019986.mlab.com:19986/acoounts';
+const MONGO_DB_URI =  'mongodb://account:kartof98@ds019986.mlab.com:19986/acoounts';
 
-const MONGO_DB_URI =  'mongodb://localhost/test';
+//const MONGO_DB_URI =  'mongodb://localhost/test';
 
 module.exports = function () {
     mongoose.connect(MONGO_DB_URI);

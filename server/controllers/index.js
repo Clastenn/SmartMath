@@ -1,3 +1,7 @@
-/**
- * Created by albert on 9/10/16.
- */
+'use strict';
+
+const usersController = require('./usersController');
+
+module.exports = {
+    users: usersController
+};

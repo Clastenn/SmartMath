@@ -5,6 +5,9 @@ angular.module('smartMath')
     .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
 
         $routeProvider
+            .when('/', {
+                redirectTo: '/index'
+            })
             .when('/index', {
                 templateUrl: 'app/components/index/indexView.html',
                 controller: 'indexController'
@@ -17,7 +20,7 @@ angular.module('smartMath')
                 templateUrl: 'app/components/user/userView.html',
                 controller: 'userController'
             })
-            .otherwise({redirectTo: '/indexx'});
+            .otherwise({redirectTo: '/index'});
 
         $locationProvider.html5Mode(true);
     }]);
